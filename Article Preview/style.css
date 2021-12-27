@@ -1,0 +1,164 @@
+:root {
+  --clr-primary: #fff;
+  --clr-secondary: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --clr-secondary-light: hsl(212, 23%, 60%);
+  --clr-bg: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--clr-bg);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-size: 13px;
+}
+
+main {
+  width: 80vw;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.preview {
+  background-color: var(--clr-primary);
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.preview-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.preview-body {
+  /* margin: 2rem 0; */
+  padding: 0 2rem;
+}
+
+.product-desc {
+  color: var(--clr-secondary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.intro {
+  color: var(--clr-secondary-light);
+  line-height: 1.5;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.avarta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+}
+
+.avarta-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avarta {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.name {
+  color: var(--clr-secondary);
+  font-weight: 700;
+}
+
+.date {
+  color: var(--clr-secondary-light);
+}
+
+.share-icon {
+  cursor: pointer;
+  background-color: var(--Light-Grayish-Blue);
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: relative;
+  z-index: 99;
+}
+
+.socials-container {
+  padding: 0 2rem;
+  background-color: var(--clr-secondary);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: none;
+}
+
+.socials-container .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.socials-container .title {
+  color: var(--clr-secondary-light);
+}
+
+.socials-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.socials-list > *:hover {
+  transform: scale(0.9);
+}
+
+.display-icons {
+  display: block;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .preview {
+    display: grid;
+    grid-template-columns: 220px auto;
+  }
+
+  .preview-img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .socials-container {
+    width: 300px;
+    border-radius: 8px;
+    bottom: 30%;
+    right: 0;
+  }
+
+  .socials-list {
+    padding: 0.8rem 1rem;
+  }
+
+  .share-icon:hover {
+    background-color: var(--Grayish-Blue);
+  }
+}
